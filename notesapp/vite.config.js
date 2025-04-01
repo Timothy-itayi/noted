@@ -5,7 +5,8 @@ import json from "@rollup/plugin-json";
 export default defineConfig({
   plugins: [react(), json()],
   build: {
-    outDir: "dist", // Explicitly set the output directory
+    outDir: "./build",
+    emptyOutDir: true, // Explicitly set the output directory
     assetsInlineLimit: 0, // Ensures files are not inlined as base64
     rollupOptions: {
       input: "src/main.jsx",
