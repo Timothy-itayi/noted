@@ -101,7 +101,7 @@ export default function App() {
           margin="0 auto"
         >
           <Heading level={1}>Noted</Heading>
-          <Heading level={2}>A cool place to store notes</Heading>
+          <Heading level={2}> making notes with style </Heading>
           <View as="form" margin="3rem 0" onSubmit={createNote}>
             <Flex
               direction="column"
