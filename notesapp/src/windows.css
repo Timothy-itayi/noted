@@ -2,7 +2,7 @@
 
 /* Primary Colors */
 :root {
-  --xp-blue: #245edb;
+  --xp-blue: #2f3f94;
   --xp-green: #2cb457;
   --xp-olive: #85c243;
   --xp-red: #cc3333;
@@ -18,7 +18,14 @@
 
 @font-face {
   font-family: 'Array-SemiboldWide';
-  src: url('/notesapp/public/fonts/Array-SemiboldWide.otf') format('woff2'),
+  src: url('./fonts/Array-SemiboldWide.otf') format('opentype'),
+    
+
+}
+
+@font-face {
+  font-family: 'Array-Wide';
+  src: url('./fonts/Array-Wide.otf') format('opentype'),
     
 
 }
@@ -35,8 +42,8 @@ body {
 .amplify-heading[data-heading="1"] {
   color: #00478f !important;
   font-size: 28px !important;
-  
-  font-family: "Array-SemiboldWide";
+  font-family: "Array-Wide";
+
   text-align: center !important;
   margin-top: 20px !important;
   margin-bottom: 5px !important; /* Reduced to bring description closer */
