@@ -1,0 +1,390 @@
+/* Windows XP Theme for AWS Amplify UI - Final Adjustments */
+
+/* Primary Colors */
+:root {
+  --xp-blue: #245edb;
+  --xp-green: #2cb457;
+  --xp-olive: #85c243;
+  --xp-red: #cc3333;
+  --xp-silver: #d6d3ce;
+  --xp-gold: #ffcb08;
+  --xp-taskbar: #245edb;
+  --xp-window-border: #0c59b9;
+  --xp-window-header: linear-gradient(to right, #2a5bc6, #1e3b8b);
+  --xp-button-face: linear-gradient(to bottom, #f6f6f6, #eaeaea, #dadada);
+  --xp-button-highlight: linear-gradient(to bottom, #f2f7fd, #e5f1fc, #d9eafa);
+  --xp-gradient-blue: linear-gradient(to bottom, #7ba2e7, #3a6ea5);
+}
+
+@font-face {
+  font-family: 'Array-SemiboldWide';
+  src: url('/notesapp/public/fonts/Array-SemiboldWide.otf') format('woff2'),
+    
+
+}
+/* Global Styles */
+body {
+  font-family: "Array-SemiboldWide";
+  background: var(--xp-gradient-blue);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+/* App title (h1) */
+.amplify-heading[data-heading="1"] {
+  color: #00478f !important;
+  font-size: 28px !important;
+  
+  font-family: "Array-SemiboldWide";
+  text-align: center !important;
+  margin-top: 20px !important;
+  margin-bottom: 5px !important; /* Reduced to bring description closer */
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* App description (h2) - styled as a tagline */
+.amplify-heading[data-heading="2"]:not(:has(+ .amplify-grid)) {
+  color: #6a95c4 !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  font-style: italic !important;
+  text-align: center !important;
+  margin-top: 0 !important;
+  margin-bottom: 25px !important;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Current Notes heading (h2) */
+.amplify-heading[data-heading="2"]:has(+ .amplify-grid) {
+  color: #00478f !important;
+  font-size: 22px !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  margin-top: 30px !important;
+  margin-bottom: 20px !important;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Main app container - centered with responsive width */
+.App {
+  max-width: 1024px !important;
+  width: 90% !important;
+  margin: 20px auto !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Authenticator styling */
+.amplify-authenticator {
+  background-color: #ece9d8 !important;
+  border: 2px solid var(--xp-window-border) !important;
+  border-radius: 8px !important;
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+    3px 3px 10px rgba(0, 0, 0, 0.4) !important;
+  padding: 0 !important;
+  max-width: 460px !important;
+  margin: 40px auto !important;
+}
+
+/* Tab navigation for Sign In/Create Account */
+.amplify-tabs {
+  background-color: #d6ecff !important;
+  border-bottom: 1px solid var(--xp-window-border) !important;
+  padding: 0 !important;
+  border-radius: 6px 6px 0 0 !important;
+}
+
+.amplify-tabs-item {
+  font-weight: bold !important;
+  color: #0055AA !important;
+  padding: 12px 20px !important;
+  border: none !important;
+}
+
+.amplify-tabs-item[data-state="active"] {
+  color: #0066CC !important;
+  border-bottom: 2px solid #0066CC !important;
+}
+
+/* Form labels */
+.amplify-field-label {
+  font-size: 13px !important;
+  font-weight: normal !important;
+  color: #000000 !important;
+  margin-bottom: 5px !important;
+  margin-left: 2px !important;
+}
+
+/* Input fields */
+.amplify-input {
+  background-color: #f0f8ff !important;
+  border: 1px solid #7f9db9 !important;
+  border-radius: 2px !important;
+  padding: 8px 12px !important;
+  width: 100% !important;
+  height: 40px !important;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1) !important;
+  margin-bottom: 16px !important;
+}
+
+/* Password field - wider to accommodate the eye icon */
+.amplify-input-with-password .amplify-input {
+  padding-right: 40px !important; /* Extra padding on right for the eye icon */
+}
+
+/* Password visibility icon container */
+.amplify-input-with-password {
+  position: relative !important;
+}
+
+/* Password visibility icon */
+.amplify-icon-button {
+  position: absolute !important;
+  right: 8px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background-color: #e9e9e9 !important;
+  border: 1px solid #cccccc !important;
+  border-radius: 2px !important;
+  padding: 4px !important;
+  height: 28px !important;
+  width: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.amplify-icon-button:hover {
+  background-color: #f5f5f5 !important;
+}
+
+.amplify-icon-button:active {
+  background-color: #dddddd !important;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Sign In button */
+.amplify-button--primary {
+  background: linear-gradient(to bottom, #3a95ff, #2c6bcc) !important;
+  border: 1px solid #245edb !important;
+  border-radius: 3px !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 13px !important;
+  padding: 8px 0 !important;
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  margin: 10px 16px !important;
+  width: calc(100% - 32px) !important;
+}
+
+/* Forgot password link */
+.amplify-button--link {
+  background: none !important;
+  border: none !important;
+  color: #0066cc !important;
+  font-size: 12px !important;
+  padding: 6px 12px !important;
+  text-decoration: underline !important;
+  box-shadow: none !important;
+  width: max-content !important;
+  margin: 0 auto 16px auto !important;
+  display: block !important;
+}
+
+.amplify-button--link:hover {
+  color: #0085ff !important;
+  text-decoration: none !important;
+}
+
+/* Form section */
+.amplify-form-section {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+.amplify-flex {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Window styling for the main app */
+.amplify-card, .amplify-flex.box {
+  border: 2px solid var(--xp-window-border) !important;
+  border-radius: 8px !important;
+  background-color: #ece9d8 !important;
+  /* XP-style drop shadow with inner highlight */
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+    3px 3px 10px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Form container - centered with depth */
+.App > .amplify-view {
+  width: 90% !important;
+  max-width: 600px !important;
+  margin: 20px auto !important;
+  border: 2px solid var(--xp-window-border) !important;
+  border-radius: 8px !important;
+  background-color: rgba(236, 233, 216, 0.9) !important;
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+    3px 3px 10px rgba(0, 0, 0, 0.4) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Form flex container */
+.App > .amplify-view > .amplify-flex {
+  padding: 20px !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Divider */
+.amplify-divider {
+  background-color: #b6b6b6 !important;
+  height: 1px !important;
+  margin: 20px auto !important;
+  width: 90% !important;
+  max-width: 600px !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Grid for notes - responsive centered */
+.amplify-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  width: 90% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+/* Note cards - consistent sizing with proper XP styling */
+.box {
+  width: 100% !important;
+  max-width: 400px !important;
+  margin: 0 !important;
+  border: 2px solid var(--xp-window-border) !important;
+  border-radius: 8px !important;
+  background-color: #ece9d8 !important;
+  overflow: hidden !important;
+  /* XP-style shadow */
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+    3px 3px 10px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Note title (h3) */
+.box .amplify-heading {
+  background: var(--xp-window-header) !important;
+  color: white !important;
+  padding: 6px 10px !important;
+  margin: 0 !important;
+  width: 100% !important;
+  border-radius: 6px 6px 0 0 !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  /* XP text shadow */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Note description */
+.box .amplify-text {
+  padding: 10px !important;
+  margin: 0 !important;
+  color: #000000 !important;
+  font-size: 12px !important;
+  text-align: center !important;
+}
+
+/* Images in notes */
+.box .amplify-image {
+  border: 1px solid #7f9db9 !important;
+  margin: 0 10px 10px 10px !important;
+  padding: 2px !important;
+  background-color: white !important;
+  width: calc(100% - 20px) !important;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Delete button */
+.box .amplify-button--destructive {
+  background: linear-gradient(to bottom, #ee5555, #cc3333) !important;
+  border: 1px solid #aa2222 !important;
+  border-radius: 3px !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 12px !important;
+  padding: 6px 36px !important;
+  margin: 0 auto 10px auto !important;
+  display: block !important;
+  width: 80% !important;
+  max-width: 150px !important;
+  /* XP-style button shadow */
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Sign Out button - positioned at the bottom */
+.App > .amplify-button {
+  margin: 30px auto !important;
+  background: linear-gradient(to bottom, #f6f6f6, #dadada) !important;
+  border: 1px solid #999 !important;
+  color: #333 !important;
+  font-weight: bold !important;
+  padding: 8px 20px !important;
+  border-radius: 3px !important;
+  /* XP-style button shadow */
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App {
+    width: 95% !important;
+  }
+  
+  .App > .amplify-view {
+    width: 95% !important;
+  }
+  
+  .amplify-grid {
+    width: 95% !important;
+  }
+  
+  .box {
+    max-width: 100% !important;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .amplify-heading[data-heading="1"] {
+    font-size: 24px !important;
+  }
+  
+  .amplify-heading[data-heading="2"] {
+    font-size: 18px !important;
+  }
+  
+  .App > .amplify-view > .amplify-flex {
+    padding: 15px !important;
+  }
+}

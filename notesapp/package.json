@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^6.9.5",
     "98.css": "^0.1.20",
     "aws-amplify": "^6.14.1",
     "react": "^19.0.0",
